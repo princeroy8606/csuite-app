@@ -3,7 +3,6 @@ import {
   getAuth,
   signInWithPopup,
   GoogleAuthProvider,
-  signInWithRedirect,
 } from "firebase/auth";
 
 const auth = getAuth();

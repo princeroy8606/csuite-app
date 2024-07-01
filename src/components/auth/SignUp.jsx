@@ -199,9 +199,9 @@ const SignUp = ({ toggleSlide }) => {
         </div>
         <div className="login-link">
           Already have an account?{" "}
-          <a onClick={() => toggleSlide("login")} className="login-link-action">
+          <p onClick={() => toggleSlide("login")} className="login-link-action">
             Log in
-          </a>
+          </p>
         </div>
         <div className="divider-container" style={{ marginTop: 0 }}>
           <div className="divider"></div>
