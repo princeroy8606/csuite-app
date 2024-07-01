@@ -22,12 +22,14 @@ const Images = {
   Microsoft,
   LinkedIn,
   Eye,
-  mail_icon ,
+  mail_icon,
   Apple,
   Lock_Vector,
   Auth_Marquee_1,
   Auth_Marquee_2,
-  Auth_Marquee_3
+  Auth_Marquee_3,
 };
 
-export default { Images };
+const assets = { Images };
+
+export default assets;

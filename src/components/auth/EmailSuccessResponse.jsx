@@ -5,6 +5,7 @@ const EmailSuccessResponse = ({ toggleSlide, email }) => {
   const handleRedirectToMail = () => {
     window.location.href = `mailto:${email}`;
   };
+
   return (
     <div className="email-container">
       <div className="logo-container">
@@ -22,7 +23,7 @@ const EmailSuccessResponse = ({ toggleSlide, email }) => {
           your password
         </h2>
       </div>
-      <div className="gmail-button" onClick={() => handleRedirectToMail()}>
+      <div className="gmail-button" onClick={handleRedirectToMail}>
         <h3>Open my Gmail</h3>
       </div>
     </div>
@@ -30,11 +31,3 @@ const EmailSuccessResponse = ({ toggleSlide, email }) => {
 };
 
 export default EmailSuccessResponse;
-{
-  /* <div className="mail-sent-msg-cnt">
-        <h2 className="msg-content-text">
-          Please use the link that sent to <br /> username@gmail.com to <br />
-          reset your password
-        </h2>
-      </div> */
-}
