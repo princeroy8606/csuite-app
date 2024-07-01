@@ -1,9 +1,7 @@
 import React from "react";
 import assets from "../assets/assets";
-import { useNavigate } from "react-router-dom";
 
 const EmailSuccessResponse = ({ toggleSlide, email }) => {
-  const navigate = useNavigate();
   const handleRedirectToMail = () => {
     window.location.href = `mailto:${email}`;
   };

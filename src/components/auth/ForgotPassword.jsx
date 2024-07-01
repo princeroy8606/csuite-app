@@ -65,9 +65,9 @@ const ForgotPassword = ({ toggleSlide, updateEmail }) => {
       <div className="remember-password-container">
         <h2 className="remember-password-text">
           Remember Password?{" "}
-          <a onClick={() => toggleSlide("login")} className="login-link">
+          <p  onClick={() => toggleSlide("login")} className="login-link">
             Log in
-          </a>
+          </p>
         </h2>
       </div>
     </div>

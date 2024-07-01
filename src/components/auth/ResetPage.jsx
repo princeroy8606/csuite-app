@@ -3,7 +3,7 @@ import assets from "../assets/assets";
 import { auth } from "../../firebase/firebaseConfig";
 import { toast } from "react-toastify";
 import { useLocation } from "react-router-dom";
-import { confirmPasswordReset, updatePassword } from "@firebase/auth";
+import { confirmPasswordReset} from "@firebase/auth";
 
 function useQuery() {
   const location = useLocation();

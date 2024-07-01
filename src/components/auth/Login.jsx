@@ -2,17 +2,13 @@ import React, { useState } from "react";
 import assets from "../assets/assets";
 import { auth } from "../../firebase/firebaseConfig";
 import { signInWithEmailAndPassword } from "@firebase/auth";
-import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { isStrongPassword, isValidEmail } from "../../utils/validityCheck";
-import axios from "axios";
 import { googlePopup } from "../../firebase/auth_google_popup";
-import { signinGithub } from "../../firebase/auth_github_execute";
 import { signinMicrosoft } from "../../firebase/auth_microsoft_execute";
-import { handleLinkedIn, signinLinkedIn } from "../../firebase/auth_linkedIn_execute";
+import { handleLinkedIn} from "../../firebase/auth_linkedIn_execute";
 
 const Login = ({ toggleSlide }) => {
-  const navigate = useNavigate();
   const [form, setForm] = useState({ email: null, password: null });
   const [error, setError] = useState({ email: false, password: false });
   const [showPassword, setShowPassword] = useState(false);
@@ -140,13 +136,12 @@ const Login = ({ toggleSlide }) => {
               <input type="checkbox" className="checkbox" />
               <p className="checkbox-text">Remember me</p>
             </label>
-            <a
-              href="#"
-              onClick={() => toggleSlide("forgot-password")}
+            <p
+              onClick={() => toggleSlide("forgot-ppssword")}
               className="forgot-password-link"
             >
               Forgot Password?
-            </a>
+            </p>
           </div>
           <div className="login-button" onClick={() => handleLogin()}>
             <p>Login</p>
@@ -198,13 +193,12 @@ const Login = ({ toggleSlide }) => {
         </div>
         <div className="signup-link-container">
           Don’t have an account?{" "}
-          <a
-            href="#"
+          <p
             onClick={() => toggleSlide("signup")}
             className="signup-link"
           >
             Sign up.
-          </a>
+          </p>
         </div>
       </div>
     </div>
