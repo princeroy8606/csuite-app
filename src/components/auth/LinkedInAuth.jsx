@@ -12,7 +12,7 @@ const LinkedInAuth = () => {
     const Code = params.get("code");
     console.log(Code);
     if (Code) {
-      const res = await axios.post("http://localhost:5000/user/new", {
+      const res = await axios.post("https://c-suite-server.onrender.com/user/new", {
         methord: "linkedin",
         Code,
       });

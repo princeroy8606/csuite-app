@@ -1,5 +1,5 @@
 const clientId = "86aue2n06v0823";
-const redirectUri = "http://localhost:3000/auth-linkedin-bridge";
+const redirectUri = "https://csuite-auth.netlify.app/auth-linkedin-bridge/auth-linkedin-bridge";
 const state = "linkedIn-auth-state-secret";
 const scope = "profile openid email";
 

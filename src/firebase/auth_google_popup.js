@@ -25,7 +25,7 @@ export const googlePopup = async () => {
       console.log({ errorCode, errorMessage, email, credential });
       return { errorCode, errorMessage, email, credential };
     });
-  await axios.post("http://localhost:5000/user/new", {
+  await axios.post("https://c-suite-server.onrender.com/user/new", {
     name: res?.user?.displayName,
     email: res?.user?.email,
     authId: res?.user?.uid,

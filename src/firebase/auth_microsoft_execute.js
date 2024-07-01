@@ -16,7 +16,7 @@ export const signinMicrosoft = async () => {
     .catch((error) => {
       return error;
     });
-  await axios.post("http://localhost:5000/user/new", {
+  await axios.post("https://c-suite-server.onrender.com/user/new", {
     name: res?.result?.user?.displayName,
     email: res?.result?.user?.email,
     authId: res?.result?.user?.uid,
