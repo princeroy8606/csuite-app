@@ -15,7 +15,7 @@ const ResetPage = () => {
     newPassword: "",
     confirmPassword: "",
   });
-  const [message, setMessage] = useState("");
+  // const [message, setMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
   const query = useQuery();
@@ -94,7 +94,7 @@ const ResetPage = () => {
             </div>
           </form>
         </div>
-        {message && <p className="message">{message}</p>}
+        {/* {message && <p className="message">{message}</p>} */}
       </div>
     </div>
   );
