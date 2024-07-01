@@ -15,7 +15,7 @@ const ResetPage = () => {
     newPassword: "",
     confirmPassword: "",
   });
-  // const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
   const query = useQuery();
