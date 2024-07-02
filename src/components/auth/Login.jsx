@@ -66,7 +66,7 @@ const Login = ({ toggleSlide }) => {
     if (type === "google") {
       res = await googlePopup();
     }
-    if (type === "github") {
+    if (type === "linkedin") {
       handleLinkedIn();
     }
     if (type === "microsoft") {
@@ -182,7 +182,7 @@ const Login = ({ toggleSlide }) => {
           </div>
           <div
             className="social-login-button"
-            onClick={() => handleSocialLogin("github")}
+            onClick={() => handleSocialLogin("linkedin")}
           >
             <img
               src={assets.Images.LinkedIn}

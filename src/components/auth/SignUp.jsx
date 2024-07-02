@@ -9,6 +9,9 @@ import {
   isValidName,
 } from "../../utils/validityCheck";
 import { toast } from "react-toastify";
+import { googlePopup } from "../../firebase/auth_google_popup";
+import { handleLinkedIn } from "../../firebase/auth_linkedIn_execute";
+import { signinMicrosoft } from "../../firebase/auth_microsoft_execute";
 
 const SignUp = ({ toggleSlide }) => {
   const [form, setForm] = useState({
@@ -87,6 +90,20 @@ const SignUp = ({ toggleSlide }) => {
         toast.error(err);
       }
     }
+  };
+
+  const handleSocialLogin = async (type) => {
+    let res;
+    if (type === "google") {
+      res = await googlePopup();
+    }
+    if (type === "linkedin") {
+      handleLinkedIn();
+    }
+    if (type === "microsoft") {
+      res = await signinMicrosoft();
+    }
+    console.log(res);
   };
 
   return (
@@ -209,14 +226,20 @@ const SignUp = ({ toggleSlide }) => {
           <div className="divider"></div>
         </div>
         <div className="social-buttons">
-          <div className="social-button">
+          <div
+            className="social-button"
+            onClick={() => handleSocialLogin("google")}
+          >
             <img
               src={assets.Images.Google}
               alt="Google"
               className="social-icon"
             />
           </div>
-          <div className="social-button">
+          <div
+            className="social-button"
+            onClick={() => handleSocialLogin("microsoft")}
+          >
             <img
               src={assets.Images.Microsoft}
               alt="Microsoft"
@@ -230,7 +253,10 @@ const SignUp = ({ toggleSlide }) => {
               className="social-icon"
             />
           </div>
-          <div className="social-button">
+          <div
+            className="social-button"
+            onClick={() => handleSocialLogin("linkedin")}
+          >
             <img
               src={assets.Images.LinkedIn}
               alt="LinkedIn"
