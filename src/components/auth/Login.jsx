@@ -72,7 +72,7 @@ const Login = ({ toggleSlide }) => {
     if (type === "microsoft") {
       res = await signinMicrosoft();
     }
-    console.log(res);
+    // console.log(res,"response");
   };
 
   return (
